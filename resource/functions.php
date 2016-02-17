@@ -15,7 +15,8 @@
 		}
 		catch (PDOException $p)
 		{
-			echo 'Не удалось подкоючиться к базе данных: ' . $p->getMessage();		
+			echo 'Не удалось подкоючиться к базе данных: ' . $p->getMessage();
+			exit();
 		}
 		
 		function fchar($p)//обезвреживание введенных данных
