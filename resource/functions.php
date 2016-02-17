@@ -19,11 +19,6 @@
 			exit();
 		}
 		
-		function fchar($p)//обезвреживание введенных данных
-		{
-			return nl2br(htmlspecialchars(trim($p), ENT_QUOTES), false);
-		}
-		
 		function printtable ($result)//вывод таблицы с описание книги
 		{
 			echo '<table align="center"><col width="145"><col width="255"><tr align="center"><th style="border-top-left-radius: 10px;">Автор</th><th>Название книги</th><th>Дата прочтения</th><th style="border-top-right-radius: 10px;">Обложка</th></tr>';

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="658d0f7f-19e7-45f5-96f4-25daa54ae3ca" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/functions.php" afterPath="$PROJECT_DIR$/resource/functions.php" />
     </list>
     <ignored path="PersonalLibrary.iws" />
@@ -29,22 +28,21 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resource/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.233279">
-              <caret line="156" column="94" selection-start-line="156" selection-start-column="94" selection-end-line="156" selection-end-column="94" />
+            <state vertical-scroll-proportion="0.23491028">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
               <folding>
-                <element signature="n#fchar#0;n#!!top" expanded="false" />
                 <element signature="n#printtable#0;n#!!top" expanded="false" />
-                <marker date="1455714412252" expanded="true" signature="25:265" placeholder="SELECT a.nam... datereading" />
-                <marker date="1455714412252" expanded="true" signature="867:896" placeholder="..." />
-                <marker date="1455714412252" expanded="true" signature="965:995" placeholder="..." />
-                <marker date="1455714412252" expanded="true" signature="1611:1648" placeholder="SELECT * FRO... author" />
-                <marker date="1455714412252" expanded="true" signature="1611:1650" placeholder="SELECT * FRO... author" />
-                <marker date="1455714412252" expanded="true" signature="1763:1796" placeholder="INSERT INTO author... " />
-                <marker date="1455714412252" expanded="true" signature="2151:2208" placeholder="SELECT * FRO... book" />
-                <marker date="1455714412252" expanded="true" signature="3011:3051" placeholder="INSERT INTO book... " />
-                <marker date="1455714412252" expanded="true" signature="3203:3240" placeholder="INSERT INTO book... " />
-                <marker date="1455714412252" expanded="true" signature="3542:3820" placeholder="SELECT a.nam... datereading" />
-                <marker date="1455714412252" expanded="true" signature="4074:4115" placeholder="INSERT INTO datereading... " />
+                <marker date="1455715002251" expanded="true" signature="25:265" placeholder="SELECT a.nam... datereading" />
+                <marker date="1455715002251" expanded="true" signature="738:767" placeholder="..." />
+                <marker date="1455715002251" expanded="true" signature="836:866" placeholder="..." />
+                <marker date="1455715002251" expanded="true" signature="1482:1519" placeholder="SELECT * FRO... author" />
+                <marker date="1455715002251" expanded="true" signature="1482:1521" placeholder="SELECT * FRO... author" />
+                <marker date="1455715002251" expanded="true" signature="1634:1667" placeholder="INSERT INTO author... " />
+                <marker date="1455715002251" expanded="true" signature="2022:2079" placeholder="SELECT * FRO... book" />
+                <marker date="1455715002251" expanded="true" signature="2882:2922" placeholder="INSERT INTO book... " />
+                <marker date="1455715002251" expanded="true" signature="3074:3111" placeholder="INSERT INTO book... " />
+                <marker date="1455715002251" expanded="true" signature="3413:3691" placeholder="SELECT a.nam... datereading" />
+                <marker date="1455715002251" expanded="true" signature="3945:3986" placeholder="INSERT INTO datereading... " />
               </folding>
             </state>
           </provider>
@@ -268,17 +266,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addbook.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.321428">
-          <caret line="29" column="85" selection-start-line="29" selection-start-column="83" selection-end-line="29" selection-end-column="85" />
+        <state vertical-scroll-proportion="-4.965517">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/addfromxml.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43150684">
+        <state vertical-scroll-proportion="-4.3448277">
           <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding>
             <marker date="1455700546667" expanded="true" signature="300:486" placeholder="..." />
@@ -287,32 +285,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/addbook.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49315068">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5584192">
+          <caret line="29" column="85" selection-start-line="29" selection-start-column="83" selection-end-line="29" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resource/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.233279">
-          <caret line="156" column="94" selection-start-line="156" selection-start-column="94" selection-end-line="156" selection-end-column="94" />
+        <state vertical-scroll-proportion="0.23491028">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
           <folding>
-            <element signature="n#fchar#0;n#!!top" expanded="false" />
             <element signature="n#printtable#0;n#!!top" expanded="false" />
-            <marker date="1455714412252" expanded="true" signature="25:265" placeholder="SELECT a.nam... datereading" />
-            <marker date="1455714412252" expanded="true" signature="867:896" placeholder="..." />
-            <marker date="1455714412252" expanded="true" signature="965:995" placeholder="..." />
-            <marker date="1455714412252" expanded="true" signature="1611:1648" placeholder="SELECT * FRO... author" />
-            <marker date="1455714412252" expanded="true" signature="1611:1650" placeholder="SELECT * FRO... author" />
-            <marker date="1455714412252" expanded="true" signature="1763:1796" placeholder="INSERT INTO author... " />
-            <marker date="1455714412252" expanded="true" signature="2151:2208" placeholder="SELECT * FRO... book" />
-            <marker date="1455714412252" expanded="true" signature="3011:3051" placeholder="INSERT INTO book... " />
-            <marker date="1455714412252" expanded="true" signature="3203:3240" placeholder="INSERT INTO book... " />
-            <marker date="1455714412252" expanded="true" signature="3542:3820" placeholder="SELECT a.nam... datereading" />
-            <marker date="1455714412252" expanded="true" signature="4074:4115" placeholder="INSERT INTO datereading... " />
+            <marker date="1455715002251" expanded="true" signature="25:265" placeholder="SELECT a.nam... datereading" />
+            <marker date="1455715002251" expanded="true" signature="738:767" placeholder="..." />
+            <marker date="1455715002251" expanded="true" signature="836:866" placeholder="..." />
+            <marker date="1455715002251" expanded="true" signature="1482:1519" placeholder="SELECT * FRO... author" />
+            <marker date="1455715002251" expanded="true" signature="1482:1521" placeholder="SELECT * FRO... author" />
+            <marker date="1455715002251" expanded="true" signature="1634:1667" placeholder="INSERT INTO author... " />
+            <marker date="1455715002251" expanded="true" signature="2022:2079" placeholder="SELECT * FRO... book" />
+            <marker date="1455715002251" expanded="true" signature="2882:2922" placeholder="INSERT INTO book... " />
+            <marker date="1455715002251" expanded="true" signature="3074:3111" placeholder="INSERT INTO book... " />
+            <marker date="1455715002251" expanded="true" signature="3413:3691" placeholder="SELECT a.nam... datereading" />
+            <marker date="1455715002251" expanded="true" signature="3945:3986" placeholder="INSERT INTO datereading... " />
           </folding>
         </state>
       </provider>
