@@ -1,5 +1,5 @@
 ﻿	<?php
-		define (query, "SELECT a.name AS 'Автор', b.name AS 'Название книги', d.rdate AS 'Дата прочтения', b.skin AS 'Обложка'
+		define (QUERY, "SELECT a.name AS 'Автор', b.name AS 'Название книги', d.rdate AS 'Дата прочтения', b.skin AS 'Обложка'
 				FROM datereading d INNER JOIN
 				(book b INNER JOIN author a
 				ON b.id_author = a.id)
@@ -10,7 +10,7 @@
 		
 		try
 		{
-			$connection = new PDO(db_hostname, db_username, db_password);//подключение к базе данных
+			$connection = new PDO(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD);//подключение к базе данных
 			$connection->query("SET NAMES 'utf8'");
 		}
 		catch (PDOException $p)

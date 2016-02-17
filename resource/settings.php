@@ -1,5 +1,5 @@
 ﻿<?php
-	define (db_hostname, "mysql:dbname=personallibrary;host=localhost");
-	define (db_username, "root");
-	define (db_password, "28461726");
+	define (DB_HOSTNAME, "mysql:dbname=personallibrary;host=localhost");
+	define (DB_USERNAME, "root");
+	define (DB_PASSWORD, "28461726");
 ?>

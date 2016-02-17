@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="658d0f7f-19e7-45f5-96f4-25daa54ae3ca" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/functions.php" afterPath="$PROJECT_DIR$/resource/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/settings.php" afterPath="$PROJECT_DIR$/resource/settings.php" />
     </list>
     <ignored path="PersonalLibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,37 +30,47 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resource/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.785714">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            <state vertical-scroll-proportion="-0.20689656">
+              <caret line="1" column="21" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="21" />
               <folding>
-                <marker date="1455696680724" expanded="true" signature="25:265" placeholder="SELECT a.nam... datereading" />
-                <marker date="1455696680724" expanded="true" signature="867:896" placeholder="..." />
-                <marker date="1455696680724" expanded="true" signature="965:995" placeholder="..." />
-                <marker date="1455696680724" expanded="true" signature="1923:1976" placeholder="SELECT * FRO... author" />
-                <marker date="1455696680724" expanded="true" signature="2142:2191" placeholder="INSERT INTO author... " />
-                <marker date="1455696680724" expanded="true" signature="2830:2912" placeholder="SELECT * FRO... book" />
-                <marker date="1455696680724" expanded="true" signature="3737:3808" placeholder="INSERT INTO book... " />
-                <marker date="1455696680724" expanded="true" signature="3890:3963" placeholder="INSERT INTO book... " />
-                <marker date="1455696680724" expanded="true" signature="4219:4521" placeholder="SELECT a.nam... datereading" />
-                <marker date="1455696680724" expanded="true" signature="4726:4823" placeholder="INSERT INTO datereading... " />
-                <marker date="1455696680724" expanded="true" signature="7191:7780" placeholder="..." />
-                <marker date="1455696680724" expanded="true" signature="7203:7271" placeholder="..." />
-                <marker date="1455696680724" expanded="true" signature="7351:7780" placeholder="..." />
-                <marker date="1455696680724" expanded="true" signature="7378:7780" placeholder="..." />
-                <marker date="1455696680724" expanded="true" signature="7405:7693" placeholder="..." />
-                <marker date="1455696680724" expanded="true" signature="7434:7678" placeholder="..." />
-                <marker date="1455696680724" expanded="true" signature="7720:7780" placeholder="..." />
-                <marker date="1455696680724" expanded="false" signature="7868:7948" placeholder="..." />
+                <marker date="1455697919326" expanded="true" signature="25:265" placeholder="SELECT a.nam... datereading" />
+                <marker date="1455697919326" expanded="true" signature="867:896" placeholder="..." />
+                <marker date="1455697919326" expanded="true" signature="965:995" placeholder="..." />
+                <marker date="1455697919326" expanded="true" signature="1923:1976" placeholder="SELECT * FRO... author" />
+                <marker date="1455697919326" expanded="true" signature="2142:2191" placeholder="INSERT INTO author... " />
+                <marker date="1455697919326" expanded="true" signature="2830:2912" placeholder="SELECT * FRO... book" />
+                <marker date="1455697919326" expanded="true" signature="3737:3808" placeholder="INSERT INTO book... " />
+                <marker date="1455697919326" expanded="true" signature="3890:3963" placeholder="INSERT INTO book... " />
+                <marker date="1455697919326" expanded="true" signature="4219:4521" placeholder="SELECT a.nam... datereading" />
+                <marker date="1455697919326" expanded="true" signature="4726:4823" placeholder="INSERT INTO datereading... " />
+                <marker date="1455697919326" expanded="true" signature="7191:7780" placeholder="..." />
+                <marker date="1455697919326" expanded="true" signature="7203:7271" placeholder="..." />
+                <marker date="1455697919326" expanded="true" signature="7351:7780" placeholder="..." />
+                <marker date="1455697919326" expanded="true" signature="7378:7780" placeholder="..." />
+                <marker date="1455697919326" expanded="true" signature="7405:7693" placeholder="..." />
+                <marker date="1455697919326" expanded="true" signature="7434:7678" placeholder="..." />
+                <marker date="1455697919326" expanded="true" signature="7720:7780" placeholder="..." />
+                <marker date="1455697919326" expanded="false" signature="7868:7948" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3523654">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resource/settings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.08809135">
-              <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+            <state vertical-scroll-proportion="-3.3333333">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,8 +84,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resource/functions.php" />
         <option value="$PROJECT_DIR$/resource/settings.php" />
+        <option value="$PROJECT_DIR$/resource/functions.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -157,6 +171,31 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
     <configuration />
@@ -203,35 +242,43 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resource/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.785714">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state vertical-scroll-proportion="-0.20689656">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="21" />
           <folding>
-            <marker date="1455696680724" expanded="true" signature="25:265" placeholder="SELECT a.nam... datereading" />
-            <marker date="1455696680724" expanded="true" signature="867:896" placeholder="..." />
-            <marker date="1455696680724" expanded="true" signature="965:995" placeholder="..." />
-            <marker date="1455696680724" expanded="true" signature="1923:1976" placeholder="SELECT * FRO... author" />
-            <marker date="1455696680724" expanded="true" signature="2142:2191" placeholder="INSERT INTO author... " />
-            <marker date="1455696680724" expanded="true" signature="2830:2912" placeholder="SELECT * FRO... book" />
-            <marker date="1455696680724" expanded="true" signature="3737:3808" placeholder="INSERT INTO book... " />
-            <marker date="1455696680724" expanded="true" signature="3890:3963" placeholder="INSERT INTO book... " />
-            <marker date="1455696680724" expanded="true" signature="4219:4521" placeholder="SELECT a.nam... datereading" />
-            <marker date="1455696680724" expanded="true" signature="4726:4823" placeholder="INSERT INTO datereading... " />
-            <marker date="1455696680724" expanded="true" signature="7191:7780" placeholder="..." />
-            <marker date="1455696680724" expanded="true" signature="7203:7271" placeholder="..." />
-            <marker date="1455696680724" expanded="true" signature="7351:7780" placeholder="..." />
-            <marker date="1455696680724" expanded="true" signature="7378:7780" placeholder="..." />
-            <marker date="1455696680724" expanded="true" signature="7405:7693" placeholder="..." />
-            <marker date="1455696680724" expanded="true" signature="7434:7678" placeholder="..." />
-            <marker date="1455696680724" expanded="true" signature="7720:7780" placeholder="..." />
-            <marker date="1455696680724" expanded="false" signature="7868:7948" placeholder="..." />
+            <marker date="1455697919326" expanded="true" signature="25:265" placeholder="SELECT a.nam... datereading" />
+            <marker date="1455697919326" expanded="true" signature="867:896" placeholder="..." />
+            <marker date="1455697919326" expanded="true" signature="965:995" placeholder="..." />
+            <marker date="1455697919326" expanded="true" signature="1923:1976" placeholder="SELECT * FRO... author" />
+            <marker date="1455697919326" expanded="true" signature="2142:2191" placeholder="INSERT INTO author... " />
+            <marker date="1455697919326" expanded="true" signature="2830:2912" placeholder="SELECT * FRO... book" />
+            <marker date="1455697919326" expanded="true" signature="3737:3808" placeholder="INSERT INTO book... " />
+            <marker date="1455697919326" expanded="true" signature="3890:3963" placeholder="INSERT INTO book... " />
+            <marker date="1455697919326" expanded="true" signature="4219:4521" placeholder="SELECT a.nam... datereading" />
+            <marker date="1455697919326" expanded="true" signature="4726:4823" placeholder="INSERT INTO datereading... " />
+            <marker date="1455697919326" expanded="true" signature="7191:7780" placeholder="..." />
+            <marker date="1455697919326" expanded="true" signature="7203:7271" placeholder="..." />
+            <marker date="1455697919326" expanded="true" signature="7351:7780" placeholder="..." />
+            <marker date="1455697919326" expanded="true" signature="7378:7780" placeholder="..." />
+            <marker date="1455697919326" expanded="true" signature="7405:7693" placeholder="..." />
+            <marker date="1455697919326" expanded="true" signature="7434:7678" placeholder="..." />
+            <marker date="1455697919326" expanded="true" signature="7720:7780" placeholder="..." />
+            <marker date="1455697919326" expanded="false" signature="7868:7948" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resource/settings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08809135">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        <state vertical-scroll-proportion="-3.3333333">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3523654">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
