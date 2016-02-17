@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="658d0f7f-19e7-45f5-96f4-25daa54ae3ca" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/functions.php" afterPath="$PROJECT_DIR$/resource/functions.php" />
     </list>
     <ignored path="PersonalLibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,31 +23,7 @@
     <favorites_list name="PersonalLibrary" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resource/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23491028">
-              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-              <folding>
-                <element signature="n#printtable#0;n#!!top" expanded="false" />
-                <marker date="1455715002251" expanded="true" signature="25:265" placeholder="SELECT a.nam... datereading" />
-                <marker date="1455715002251" expanded="true" signature="738:767" placeholder="..." />
-                <marker date="1455715002251" expanded="true" signature="836:866" placeholder="..." />
-                <marker date="1455715002251" expanded="true" signature="1482:1519" placeholder="SELECT * FRO... author" />
-                <marker date="1455715002251" expanded="true" signature="1482:1521" placeholder="SELECT * FRO... author" />
-                <marker date="1455715002251" expanded="true" signature="1634:1667" placeholder="INSERT INTO author... " />
-                <marker date="1455715002251" expanded="true" signature="2022:2079" placeholder="SELECT * FRO... book" />
-                <marker date="1455715002251" expanded="true" signature="2882:2922" placeholder="INSERT INTO book... " />
-                <marker date="1455715002251" expanded="true" signature="3074:3111" placeholder="INSERT INTO book... " />
-                <marker date="1455715002251" expanded="true" signature="3413:3691" placeholder="SELECT a.nam... datereading" />
-                <marker date="1455715002251" expanded="true" signature="3945:3986" placeholder="INSERT INTO datereading... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -195,9 +170,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="24" width="1303" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
