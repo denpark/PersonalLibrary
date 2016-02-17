@@ -131,3 +131,9 @@ tr:hover td {
 	text-align: center;
 	color: #7A909E;
 }
+
+a {
+	font-family: 'Trajan Pro 3';
+	font-size: 15px;
+	color: #7A909E;
+}

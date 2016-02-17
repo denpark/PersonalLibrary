@@ -1,6 +1,7 @@
 ﻿	<?php
 		require_once "resource/functions.php";
 		myheader("Добавить книгу");
+		echo '<center><a href="addfromxml.php">Добавить книгу из XML</a></center><br>';
 		if (isset($_POST['authorname'], $_POST['bookname'], $_POST['datereading']))
 		{		
 			if (strtotime($_POST['datereading']) != false)

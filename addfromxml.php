@@ -1,6 +1,7 @@
 ﻿<?php
 	require_once "resource/functions.php";
 	myheader("Добавить книгу из XML");
+	echo '<center><a href="addbook.php">Добавить книгу</a></center><br>';
 	if (isset($_FILES['xmlfile']['name']))
 	{
 		insertfromxml ($_FILES['xmlfile']);
