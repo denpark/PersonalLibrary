@@ -1,6 +1,7 @@
 ﻿<?php
 	require_once "resource/functions.php";
-	myheader("Добавить книгу из XML");
+	$title = "Добавить книгу из XML";
+	require_once "resource/header.php";
 	echo '<center><a href="addbook.php">Добавить книгу</a></center><br>';
 	if (isset($_FILES['xmlfile']['name']))
 	{
@@ -11,5 +12,5 @@
 	<input type="file" name="xmlfile" required="required"><br>
 	<input type="submit" value="Добавить">
 	</div>';
-	myfooter();	
+	require_once "resource/footer.php";
 ?>

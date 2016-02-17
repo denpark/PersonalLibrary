@@ -1,6 +1,7 @@
 ﻿<?php
 	require_once "resource/functions.php";
-	myheader("Прочитанные книги");
+	$title = "Прочитанные книги";
+	require_once "resource/header.php";
 	echo '<center><a href="addbook.php">Добавить книгу</a></center><br>';
 	$result = queryerror(QUERY);
 	if ($result->rowcount() == 0)
@@ -10,5 +11,5 @@
 	}
 	printtable ($result);
 	echo '<center><a href="addbook.php">Добавить книгу</a></center>';
-	myfooter();		
+	require_once "resource/footer.php";
 ?>  

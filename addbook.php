@@ -1,6 +1,7 @@
 ﻿	<?php
 		require_once "resource/functions.php";
-		myheader("Добавить книгу");
+		$title = "Добавить книгу";
+		require_once "resource/header.php";
 		echo '<center><a href="addfromxml.php">Добавить книгу из XML</a></center><br>';
 		if (isset($_POST['authorname'], $_POST['bookname'], $_POST['datereading']))
 		{		
@@ -33,6 +34,6 @@
     <input type="submit" value="Добавить">
     </form>
     </div>
-	<?php 
-		myfooter();
+	<?php
+		require_once "resource/footer.php";
 	?>

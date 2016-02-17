@@ -206,38 +206,5 @@
 					echo '<div class="divtext">Тип файла не соответствует XML!</div>';
 				}
 			}		
-		}		
-		
-		function myheader ($p)
-		{
-			echo '	<!doctype html>
-					<html>
-					<head>
-					<meta charset="utf-8">
-					<title>'.$p.'</title>
-					</head>
-					<link href="resource/style.css" rel="stylesheet">
-					</head>
-					<body>
-					<div class="wrapper">
-						<div class="header">
-							<div class="divmenu">
-								<a href="index.php"><div class="menu">Прочитанные книги</div></a>
-								<a href="addbook.php"><div class="menu">Добавить книгу</div></a>
-								<a href="addfromxml.php"><div class="menu">Добавить книгу из XML</div></a>
-							</div>		
-						</div>
-					<div class="content">
-					<br>
-					<div class="divtext"><b>'.$p.'</b></div><br>';
-		}
-		
-		function myfooter ()
-		{
-			echo '	</div>
-					<div class="content" style="height: 40px; border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;"></div>
-					</div>
-					</body>
-					</html>';	
 		}
 	?>
