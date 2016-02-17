@@ -42,39 +42,22 @@
 			echo '</table><br>';
 		}
 		
-		function queryerror ($query)//проверка выполнения запроса
-		{
-			global $connection;
-			$result = $connection->query($query);
-			if (!$result)
-			{	
-				echo 'Не удалось выполнить запрос: ';
-				print_r($connection->errorInfo());
-				exit();	
-			}
-			else
-			{
-				return $result;
-			}
-		}
-		
 		function insertauthorname ($authorname)//добавление в базу данных имени автора
 		{
 			global $connection;
-			$authorname = fchar($authorname);
-			$query = "SELECT * FROM author a WHERE a.name='".$authorname."'";//запрос на существование автора
-			$result = queryerror($query);
-			if ($result->rowCount() == 0)//если автора нет в базе данных, добавляем его
+			$stmt = $connection->prepare("SELECT * FROM author a WHERE a.name = ?");
+			$stmt->execute(array($authorname));
+			if ($stmt->rowCount() == 0)
 			{
-				$query = "INSERT INTO author VALUES ('', '".$authorname."')";
-				queryerror($query);				
-				return $connection->lastInsertId();//возвращаем (запоминаем) id	автора		
+				$stmt = $connection->prepare("INSERT INTO author VALUES ('', ?)");
+				$stmt->execute(array($authorname));
+				return $connection->lastInsertId();
 			}
-			else//иначе возвращаем (запоминаем) id автора
+			else
 			{
-				foreach ($result as $row)
+				foreach ($stmt->fetch() as $row)
 				{
-					return $row['id'];	
+					return $row["id"];
 				}
 			}
 		}
@@ -82,19 +65,10 @@
 		function insertbookname ($id_author, $bookname, $skin)//добавление в базу данных название книги и обложки
 		{
 			global $connection;
-			$bookname = fchar($bookname);
-			if (!is_null($skin))
+			$stmt = $connection->prepare("SELECT * FROM book b WHERE b.name = ? AND b.id_author = ?");
+			$stmt->execute(array($bookname, $id_author));
+			if ($stmt->rowCount() == 0)//если книги нет в базе данных, добавляем ее
 			{
-				$skin['name'] = fchar($skin['name']);
-				$skin['tmp_name'] = fchar($skin['tmp_name']);
-				$skin['error'] = fchar($skin['error']);
-				$skin['type'] = fchar($skin['type']);
-			}
-			$query = "SELECT * FROM book b WHERE b.name='".$bookname."' AND b.id_author='".$id_author."'";//запрос на существование книги
-			$result = queryerror($query);
-			if ($result->rowCount() == 0)//если книги нет в базе данных, добавляем ее
-			{
-				global $connection;
 				$image = "NULL";//флаг названия обложки
 				if (isset($skin['name']))//если обложка указана и ее формат .png или .jpg, то сохраняем ее
 				{
@@ -111,48 +85,46 @@
 							return;//выход из функции
 						}
 					}
-				}		
+				}
 				if ($image == 'NULL')//если обложка не была указана, записываем в базу данных NULL
 				{
-					$query = "INSERT INTO book VALUES ('', '".$id_author."', '".$bookname."', $image)";	
+					$stmt = $connection->prepare("INSERT INTO book VALUES ('', ?, ?, NULL)");
+					$stmt->execute(array($id_author, $bookname));
 				}
-				else//иначе записываем местоположение обложки 
+				else//иначе записываем местоположение обложки
 				{
-					$query = "INSERT INTO book VALUES ('', '".$id_author."', '".$bookname."', '$image')";
-				}				
-				queryerror($query);
-				return $connection->lastInsertId();//возвращаем (запоминаем) id книги			
+					$stmt = $connection->prepare("INSERT INTO book VALUES ('', ?, ?, ?)");
+					$stmt->execute(array($id_author, $bookname, $image));
+				}
+				return $connection->lastInsertId();//возвращаем (запоминаем) id книги
 			}
 			else//иначе возвращаем данные о книге
 			{
-				foreach ($result as $row)
-				{					
-					$id_book = $row['id'];	
+				while ($row = $stmt->fetch())
+				{
+					$id_book = $row['id'];
 				}
-				$query = "	SELECT a.name AS 'Автор', b.name AS 'Название книги', d.rdate AS 'Дата прочтения', b.skin AS 'Обложка'
+				$stmt = $connection->prepare("SELECT a.name AS 'Автор', b.name AS 'Название книги', d.rdate AS 'Дата прочтения', b.skin AS 'Обложка'
 					FROM datereading d INNER JOIN
 					(book b INNER JOIN author a
 					ON b.id_author = a.id)
 					ON d.id_book = b.id
-					WHERE a.id = ".$id_author." AND b.id = ".$id_book."
-					ORDER BY d.rdate";
-				return queryerror($query);
-			}				
+					WHERE a.id = ? AND b.id = ?
+					ORDER BY d.rdate");
+				$stmt->execute(array($id_author, $id_book));
+				return $stmt->fetchAll();
+			}
 		}
 		
 		function inserdatereading($id_book, $datereading)//добавление в базу данных дату прочтения книги
 		{
-			$datereading = fchar($datereading);
-			$query = "INSERT INTO datereading VALUES ('', '".$id_book."', '".date('Y-m-d', strtotime($datereading))."')";
-			queryerror($query);			
+			global $connection;
+			$stmt = $connection->prepare("INSERT INTO datereading VALUES ('', ?, ?)");
+			$stmt->execute(array($id_book, date('Y-m-d', strtotime($datereading))));
 		}
 		
 		function insertfromxml ($file)////добавление в базу дынных книг из xml файла
 		{
-			$file['name'] = fchar($file['name']);
-			$file['error'] = fchar($file['error']);
-			$file['type'] = fchar($file['type']);
-			$file['tmp_name'] = fchar($file['tmp_name']);
 			if ($file['error'] == 0)
 			{
 				if ($file['type'] == 'text/xml')
@@ -182,6 +154,7 @@
 							$array[o][$j++]['Обложка'] = NULL;
 						}
 					}
+					echo '<div class="divtext">Всего книг в  XML файле: '.($i + $j).'</div><br>';
 					if (isset($array[n]))//если книги добавлялись, выводим их
 					{
 						echo '<div class="divtext">Добавлено книг из XML файла: '.count($array[n]).'</div>';
@@ -205,6 +178,6 @@
 				{
 					echo '<div class="divtext">Тип файла не соответствует XML!</div>';
 				}
-			}		
+			}
 		}
 	?>
