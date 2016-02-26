@@ -10,13 +10,27 @@
 		
 		try
 		{
-			$connection = new PDO(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD);//подключение к базе данных
+			$connection = new PDO(DB_HOSTNAME, DB_USERNAME);//подключение к базе данных
 			$connection->query("SET NAMES 'utf8'");
 		}
 		catch (PDOException $p)
 		{
 			echo 'Не удалось подкоючиться к базе данных: ' . $p->getMessage();
 			exit();
+		}
+		
+		function queryerror ($query, $array)
+		{
+			global $connection;
+			$stmt = $connection->prepare($query);
+			if (!$stmt->execute($array))
+			{
+				echo 'Произошла ошибка при выполнении запроса: ';
+				print_r ($stmt->errorinfo());
+				require_once "footer.html";
+				die;
+			}
+			else return $stmt;
 		}
 		
 		function printtable ($result)//вывод таблицы с описание книги
@@ -40,12 +54,10 @@
 		function insertauthorname ($authorname)//добавление в базу данных имени автора
 		{
 			global $connection;
-			$stmt = $connection->prepare("SELECT * FROM author a WHERE a.name = ?");
-			$stmt->execute(array($authorname));
+			$stmt = queryerror("SELECT * FROM author a WHERE a.name = ?", array($authorname));
 			if ($stmt->rowCount() == 0)
 			{
-				$stmt = $connection->prepare("INSERT INTO author VALUES ('', ?)");
-				$stmt->execute(array($authorname));
+				queryerror("INSERT INTO author VALUES ('', ?)", array($authorname));
 				return $connection->lastInsertId();
 			}
 			else
@@ -60,8 +72,7 @@
 		function insertbookname ($id_author, $bookname, $skin)//добавление в базу данных название книги и обложки
 		{
 			global $connection;
-			$stmt = $connection->prepare("SELECT * FROM book b WHERE b.name = ? AND b.id_author = ?");
-			$stmt->execute(array($bookname, $id_author));
+			$stmt = queryerror("SELECT * FROM book b WHERE b.name = ? AND b.id_author = ?", array($bookname, $id_author));
 			if ($stmt->rowCount() == 0)//если книги нет в базе данных, добавляем ее
 			{
 				$image = "NULL";//флаг названия обложки
@@ -83,13 +94,11 @@
 				}
 				if ($image == 'NULL')//если обложка не была указана, записываем в базу данных NULL
 				{
-					$stmt = $connection->prepare("INSERT INTO book VALUES ('', ?, ?, NULL)");
-					$stmt->execute(array($id_author, $bookname));
+					queryerror("INSERT INTO book VALUES ('', ?, ?, NULL)", array($id_author, $bookname));
 				}
 				else//иначе записываем местоположение обложки
 				{
-					$stmt = $connection->prepare("INSERT INTO book VALUES ('', ?, ?, ?)");
-					$stmt->execute(array($id_author, $bookname, $image));
+					queryerror("INSERT INTO book VALUES ('', ?, ?, ?)", array($id_author, $bookname, $image));
 				}
 				return $connection->lastInsertId();//возвращаем (запоминаем) id книги
 			}
@@ -99,23 +108,20 @@
 				{
 					$id_book = $row['id'];
 				}
-				$stmt = $connection->prepare("SELECT a.name AS 'Автор', b.name AS 'Название книги', d.rdate AS 'Дата прочтения', b.skin AS 'Обложка'
+				$stmt = queryerror("SELECT a.name AS 'Автор', b.name AS 'Название книги', d.rdate AS 'Дата прочтения', b.skin AS 'Обложка'
 					FROM datereading d INNER JOIN
 					(book b INNER JOIN author a
 					ON b.id_author = a.id)
 					ON d.id_book = b.id
 					WHERE a.id = ? AND b.id = ?
-					ORDER BY d.rdate");
-				$stmt->execute(array($id_author, $id_book));
+					ORDER BY d.rdate", array($id_author, $id_book));
 				return $stmt->fetchAll();
 			}
 		}
 		
 		function inserdatereading($id_book, $datereading)//добавление в базу данных дату прочтения книги
 		{
-			global $connection;
-			$stmt = $connection->prepare("INSERT INTO datereading VALUES ('', ?, ?)");
-			$stmt->execute(array($id_book, date('Y-m-d', strtotime($datereading))));
+			queryerror("INSERT INTO datereading VALUES ('', ?, ?)", array($id_book, date('Y-m-d', strtotime($datereading))));
 		}
 		
 		function insertfromxml ($file)////добавление в базу дынных книг из xml файла
