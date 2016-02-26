@@ -1,8 +1,9 @@
 ﻿	<?php
 		require_once "resource/functions.php";
 		$title = "Добавить книгу";
-		require_once "resource/header.php";
-		echo '<center><a href="addfromxml.php">Добавить книгу из XML</a></center><br>';
+		$href_file = "addfromxml.php";
+		$href_name = "Добавить книгу из XML";
+		require_once "resource/header.html";
 		if (isset($_POST['authorname'], $_POST['bookname'], $_POST['datereading']))
 		{		
 			if (strtotime($_POST['datereading']) != false)
@@ -35,5 +36,5 @@
     </form>
     </div>
 	<?php
-		require_once "resource/footer.php";
+		require_once "resource/footer.html";
 	?>
