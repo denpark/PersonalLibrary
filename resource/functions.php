@@ -131,7 +131,6 @@
 				if ($file['type'] == 'text/xml')
 				{						
 					$xml = simplexml_load_file($file['tmp_name']);
-					$i = $j = 0;
 					foreach ($xml->readbook as $readbook)
 					{
 						$authorname = $readbook->authorname;
@@ -142,20 +141,14 @@
 						{
 							inserdatereading($book, $datereading);
 							//запоминаем данные о новой книге в массиве $array[n]
-							$array[n][$i]['Автор'] = $authorname; 
-							$array[n][$i]['Название книги'] = $bookname;
-							$array[n][$i]['Дата прочтения'] = $datereading;
-							$array[n][$i++]['Обложка'] = NULL;
+							$array[n][] = array("Автор"=>$authorname, "Название книги"=>$bookname, "Дата прочтения"=>$datereading, "Обложка"=>NULL);
 						}
 						else//иначе запоминаем данные о прочитанной книге в массиве $array[o]
 						{
-							$array[o][$j]['Автор'] = $authorname;
-							$array[o][$j]['Название книги'] = $bookname;
-							$array[o][$j]['Дата прочтения'] = $datereading;
-							$array[o][$j++]['Обложка'] = NULL;
+							$array[o][] = array("Автор"=>$authorname, "Название книги"=>$bookname, "Дата прочтения"=>$datereading, "Обложка"=>NULL);
 						}
 					}
-					echo '<div class="divtext">Всего книг в  XML файле: '.($i + $j).'</div><br>';
+					echo '<div class="divtext">Всего книг в  XML файле: '.(count($array[n]) + count($array[o])).'</div><br>';
 					if (isset($array[n]))//если книги добавлялись, выводим их
 					{
 						echo '<div class="divtext">Добавлено книг из XML файла: '.count($array[n]).'</div>';
